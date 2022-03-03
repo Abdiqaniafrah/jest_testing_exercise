@@ -43,6 +43,8 @@ describe('sum', () => {
   test('can add two decimals', () => {
     actual = sum (0.3, 0.6)
     expected = 0.9;
+    // use toBeCloseTo due to floating point issues
+    // expect(actual).toBeCloseTo(expected);
     expect(actual).toBeCloseTo(expected);  
   });
 
@@ -90,6 +92,13 @@ describe('subtract', () => {
     expected = 0;
     actual = subtract(0, 0);
     expect(actual).toBe(expected);
+  });
+
+  test('can subtract two decimals', () => {
+    actual = sum (0.3, -0.6)
+    expected = -0.3;
+    // use toBeCloseTo due to floating point issues
+    expect(actual).toBeCloseTo(expected);  
   });
 
 });
