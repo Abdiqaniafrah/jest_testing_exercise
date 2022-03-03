@@ -146,6 +146,7 @@ describe('multiply', () => {
     actual = multiply(0.5, 0.1);
     expect(actual).toBe(expected);
   });
+  
 });
 
 describe('divide', () => {
