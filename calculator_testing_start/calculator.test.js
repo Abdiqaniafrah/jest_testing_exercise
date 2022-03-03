@@ -40,6 +40,12 @@ describe('sum', () => {
     expect(actual).toBe(expected);  
   });
 
+  test('can add two decimals', () => {
+    actual = sum (0.3, 0.6)
+    expected = 0.9;
+    expect(actual).toBeCloseTo(expected);  
+  });
+
 });
 
 describe('subtract', () => {
@@ -89,6 +95,12 @@ describe('subtract', () => {
 });
 
 describe('multiply', () => {
+
+  test('can multiply two small numbers', () => {
+    expected = 7;
+    actual = subtract(10, 3);
+    expect(actual).toBe(expected);
+  });
 
 });
 
