@@ -10,7 +10,11 @@ const multiply = (a,b) => a*b;
 
 const divide = null;
 
-const modulus = null;
+const modulus = (a,b) => {
+    return a%b;
+    // 10%5 - 0
+    // 12%5 - 2
+};
 
 const even = null;
 

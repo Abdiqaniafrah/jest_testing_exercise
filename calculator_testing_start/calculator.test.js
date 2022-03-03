@@ -146,7 +146,7 @@ describe('multiply', () => {
     actual = multiply(0.5, 0.1);
     expect(actual).toBe(expected);
   });
-  
+
 });
 
 describe('divide', () => {
@@ -154,6 +154,17 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+  test('can find modulus with no remainder', () => {
+    expected = 0;
+    actual = modulus(10, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can find modulus with a remainder', () => {
+    expected = 2;
+    actual = modulus(12, 5);
+    expect(actual).toBe(expected);
+  });
 
 });
 
