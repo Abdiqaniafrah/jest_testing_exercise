@@ -106,11 +106,46 @@ describe('subtract', () => {
 describe('multiply', () => {
 
   test('can multiply two small numbers', () => {
-    expected = 7;
-    actual = subtract(10, 3);
+    expected = 30;
+    actual = multiply(10, 3);
     expect(actual).toBe(expected);
   });
 
+  test('can multiply two big numbers', () => {
+    expected = 200000;
+    actual = multiply(1000, 200);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply number with zero', () => {
+    expected = 0;
+    actual = multiply(10, 0);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply two zeros', () => {
+    expected = 0;
+    actual = multiply(0, 0);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply two negative numbers', () => {
+    expected = 50;
+    actual = multiply(-10, -5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply a positive with a negative number', () => {
+    expected = -50;
+    actual = multiply(-10, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply two decimal numbers', () => {
+    expected = 0.05;
+    actual = multiply(0.5, 0.1);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('divide', () => {
